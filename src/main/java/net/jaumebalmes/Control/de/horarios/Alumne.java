@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Alumne {
     private String nom;
     private String cognoms;
-    private LocalDate dataNaixement;
+    private String email;
     private String grup;
 
     public String getNom() {
@@ -20,11 +20,13 @@ public class Alumne {
     public void setCognoms(String cognoms) {
         this.cognoms = cognoms;
     }
-    public LocalDate getDataNaixement() {
-        return dataNaixement;
+
+    public String getEmail() {
+        return email;
     }
-    public void setDataNaixement(LocalDate dataNaixement) {
-        this.dataNaixement = dataNaixement;
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getGrup() {
@@ -35,11 +37,11 @@ public class Alumne {
         this.grup = grup;
     }
 
-    public Alumne(String nom, String cognoms, LocalDate dataNaixement, String grup) {
+    public Alumne(String nom, String cognoms, String email, String grup) {
         super();
         this.nom = nom;
         this.cognoms = cognoms;
-        this.dataNaixement = dataNaixement;
+        this.email = email;
         this.grup = grup;
     }
 }
