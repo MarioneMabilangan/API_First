@@ -17,9 +17,9 @@ public class ClientController {
     public List<Alumne> getAlumnes(){
         ArrayList<Alumne> Alumnes = new ArrayList<>();
 
-        Alumnes.add(new Alumne("Marione","Basaysay Mabilangan", LocalDate.of(2003, Month.JUNE, 4), "DAM2"));
-        Alumnes.add(new Alumne("Jesus","Cristo", LocalDate.of(2003, Month.JUNE, 4), "ASIX"));
-        Alumnes.add(new Alumne("Jose","Ricardo", LocalDate.of(2003, Month.JUNE, 4), "DAM2"));
+        Alumnes.add(new Alumne("Marione","Basaysay Mabilangan", "mbasaysa@jaumebalmes.net", "DAM2"));
+        Alumnes.add(new Alumne("Jesus","Cristo", "jcristo@jaumebalmes.net", "ASIX"));
+        Alumnes.add(new Alumne("Jose","Ricardo", "jfrancis@jaumebalmes.net", "DAM2"));
         return Alumnes;
     }
 
@@ -27,9 +27,23 @@ public class ClientController {
     public Alumne getnAlumnes(@PathVariable int id){
         ArrayList<Alumne> alumnes = new ArrayList<>();
 
-        alumnes.add(new Alumne("Marione","Basaysay Mabilangan", LocalDate.of(2003, Month.JUNE, 4), "DAM2"));
-        alumnes.add(new Alumne("Jesus","Cristo", LocalDate.of(2003, Month.JUNE, 4), "ASIX"));
-        alumnes.add(new Alumne("Jose","Ricardo", LocalDate.of(2003, Month.JUNE, 4), "DAM2"));
+        alumnes.add(new Alumne("Marione","Basaysay Mabilangan", "mbasaysa@jaumebalmes.net", "DAM2"));
+        alumnes.add(new Alumne("Jesus","Cristo", "jcristo@jaumebalmes.net", "ASIX"));
+        alumnes.add(new Alumne("Jose","Ricardo", "jfrancis@jaumebalmes.net", "DAM2"));
         return alumnes.get(id);
+    }
+
+    @GetMapping("/cuando")
+    public List<Cuando> getCuando(){
+        ArrayList<Alumne> Alumnes = new ArrayList<>();
+        ArrayList<Cuando> Hora = new ArrayList<>();
+
+        Alumnes.add(new Alumne("Marione","Basaysay Mabilangan", "mbasaysa@jaumebalmes.net", "DAM2"));
+        Alumnes.add(new Alumne("Jesus","Cristo", "jcristo@jaumebalmes.net", "ASIX"));
+        Alumnes.add(new Alumne("Jose","Ricardo", "jfrancis@jaumebalmes.net", "DAM2"));
+
+        for(Alumne al : Alumnes)
+        Hora.add(new Cuando(al, "15:30:01", "21:00:01"));
+        return Hora;
     }
 }
