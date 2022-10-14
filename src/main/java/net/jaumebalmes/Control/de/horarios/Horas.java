@@ -11,8 +11,6 @@ double totalHoras;
 double TotalFaltas;
 
 
-
-
 public Alumne getEstudiante() {
 	return Alumnes;
 }
@@ -37,23 +35,11 @@ public double getTotalFaltas() {
 public void setTotalFaltas(double totalFaltas) {
 	TotalFaltas = totalFaltas;
 }
-public Horas( Alumne Alumnes, int uF, double totalHoras, double totalFaltas) {
-	super();
-	this.Alumnes = Alumnes;
-	UF = uF;
-	this.totalHoras = totalHoras;
-	TotalFaltas = totalFaltas;
-}
-@Override
-public String toString() {
-	return "Horas [" + Alumnes + ", UF=" + UF + ", totalHoras=" + totalHoras + ", TotalFaltas="
-			+ TotalFaltas + "]";
-}
 
-
-
-
-
-
-
+	public Horas(Alumne alumnes, int UF, double totalHoras, double totalFaltas) {
+		Alumnes = alumnes;
+		this.UF = UF;
+		this.totalHoras = totalHoras;
+		TotalFaltas = totalFaltas;
+	}
 }
