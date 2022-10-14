@@ -46,4 +46,18 @@ public class ClientController {
         Hora.add(new Cuando(al, "15:30:01", "21:00:01"));
         return Hora;
     }
+    
+    @GetMapping("/horas")
+    public List<Horas> getHoras(){
+        ArrayList<Alumne> Alumnes = new ArrayList<>();
+        ArrayList<Horas> Hora = new ArrayList<>();
+
+        Alumnes.add(new Alumne("Marione","Basaysay Mabilangan", "mbasaysa@jaumebalmes.net", "DAM2"));
+        Alumnes.add(new Alumne("Jesus","Cristo", "jcristo@jaumebalmes.net", "ASIX"));
+        Alumnes.add(new Alumne("Jose","Ricardo", "jfrancis@jaumebalmes.net", "DAM2"));
+
+        for(Alumne al : Alumnes)
+        Hora.add(new Horas(al, 3, 42.45, 127.00));
+        return Hora;
+    }
 }
