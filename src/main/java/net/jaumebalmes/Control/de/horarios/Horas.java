@@ -46,7 +46,7 @@ public Horas( Alumne Alumnes, int uF, double totalHoras, double totalFaltas) {
 }
 @Override
 public String toString() {
-	return "Horas [" + Alumnes + ", UF=" + UF + ", totalHoras=" + totalHoras + ", TotalFaltas="
+	return "Horas [ UF=" + UF + ", totalHoras=" + totalHoras + ", TotalFaltas="
 			+ TotalFaltas + "]";
 }
 
