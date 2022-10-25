@@ -1,8 +1,6 @@
 package net.jaumebalmes.Control.de.horarios;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Locale;
 
 public class Cuando {
     private Alumne alumne;
